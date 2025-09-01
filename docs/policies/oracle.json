@@ -1,15 +1,20 @@
-﻿{ "rules": [
-  { "id": "ORA-TABLE-NOLOGGING", "severity": "error", "desc": "La tabla no especifica NOLOGGING." },
-  { "id": "ORA-TABLE-NOCOMPRESS", "severity": "error", "desc": "La tabla no especifica COMPRESS." },
-  { "id": "ORA-INDEX-NOLOGGING", "severity": "error", "desc": "El índice no especifica NOLOGGING." },
-  { "id": "ORA-INDEX-COMPOSITE-NOCOMPRESS", "severity": "error", "desc": "Índice compuesto sin COMPRESS." },
-  { "id": "ORA-VARCHAR2-BYTE", "severity": "warning", "desc": "Recomendado declarar VARCHAR2(... BYTE)." },
-  { "id": "OK-TABLE-NAME-PREFIX", "severity": "info", "desc": "Nombre de tabla con prefijo TBL_." },
-  { "id": "OK-COMMENT-TABLE", "severity": "info", "desc": "Comentario de tabla presente." },
-  { "id": "OK-PK-NAME-MATCH", "severity": "info", "desc": "La PK coincide con el índice PK_ correspondiente." },
-  { "id": "NOM-COLS", "severity": "info", "desc": "Columnas T###_* aceptadas si replican fuente; nuevas deben usar NU_/IM_/FH_." },
-  { "id": "ORA-INSERT-COLS-LIST", "severity": "error", "desc": "INSERT sin enumerar columnas." },
-  { "id": "ORA-FORALL-RANGE", "severity": "error", "desc": "FORALL con rango inválido; debe ser 1..coleccion.COUNT." },
-  { "id": "ORA-BITACORA-FLUJO", "severity": "warning", "desc": "Bitácora: usar SP_BITACORA_INICIO al inicio y SP_BITACORA_FIN al final con el mismo ID_EJECUCION." },
-  { "id": "INPUT-NO-CODE", "severity": "error", "desc": "El adjunto no expuso contenido." }
-] }
+﻿{
+  "rules": [
+    { "id": "INPUT-NO-CODE", "severity": "error",  "desc": "El adjunto no expuso contenido." },
+    { "id": "ORA-TABLE-NOLOGGING",  "severity": "error",  "desc": "La tabla no especifica NOLOGGING." },
+    { "id": "ORA-TABLE-COMPRESS",   "severity": "error",  "desc": "La tabla no especifica COMPRESS." },
+    { "id": "ORA-TABLE-TABLESPACE", "severity": "error",  "desc": "Falta TABLESPACE en la tabla." },
+    { "id": "ORA-TABLE-COMMENT",    "severity": "error",  "desc": "Falta COMMENT de la tabla." },
+    { "id": "ORA-VARCHAR2-BYTE",    "severity": "warning","desc": "Recomendado declarar VARCHAR2(... BYTE) explícito." },
+    { "id": "ORA-INDEX-NOLOGGING",          "severity": "error",  "desc": "Índice sin NOLOGGING." },
+    { "id": "ORA-INDEX-COMPRESS-COMPOSITE", "severity": "error",  "desc": "Índice compuesto (≥2 columnas) sin COMPRESS." },
+    { "id": "ORA-INDEX-TABLESPACE",         "severity": "error",  "desc": "Falta TABLESPACE en índice." },
+    { "id": "ORA-PK-NAME-MATCH",            "severity": "info",   "desc": "La PK coincide con su índice PK_." },
+    { "id": "ORA-INSERT-COLUMNS-EXPLICIT",  "severity": "error",  "desc": "En INSERT se debe especificar la lista de columnas (prohibido INSERT ... VALUES sin columnas)." },
+    { "id": "ORA-FORALL-RANGE",             "severity": "error",  "desc": "El rango de FORALL debe ser 1..coleccion.COUNT (dos puntos)." },
+    { "id": "ORA-BITACORA-INICIO-FIN",      "severity": "error",  "desc": "Debe existir SP_BITACORA_INICIO antes del DML y SP_BITACORA_FIN al cierre con el mismo ID_EJECUCION." },
+    { "id": "ORA-COMMIT-IN-LOOP",           "severity": "warning","desc": "Evitar COMMIT dentro de bucles masivos; usar batching." },
+    { "id": "OK-TABLE-NAME-PREFIX",         "severity": "info",   "desc": "Tabla con prefijo TBL_/TB_/T_ correcto." },
+    { "id": "OK-COMMENT-TABLE",             "severity": "info",   "desc": "Comentario de tabla presente." }
+  ]
+}
