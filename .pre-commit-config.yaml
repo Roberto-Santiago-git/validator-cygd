@@ -3,16 +3,23 @@
   hooks:
   - id: cygd-oracle
     name: CyGD Oracle
-    entry: python -m cygd_validator.cli --policy policies/oracle.json
     language: system
-    files: '\.(sql|ddl|pkb|pks|pkg)$'
+    entry: E:/Users/10055372/validator-cygd/.venv/Scripts/python.exe -m cygd_validator.cli
+    args: ["--policy","policies/oracle.json"]
+    files: '^(?!\.venv/).*\.(sql|ddl|pkb|pks|pkg)$'
+    exclude: '^(\.git/|\.venv/|src/cygd_validator\.egg-info/|\.github/)'
+
   - id: cygd-ps1
     name: CyGD PowerShell
-    entry: python -m cygd_validator.cli --engine powershell --policy policies/powershell.json
     language: system
-    files: '\.ps1$'
+    entry: E:/Users/10055372/validator-cygd/.venv/Scripts/python.exe -u tools/hook_wrapper.py
+    files: '^(?!\.venv/).*\.ps1$'
+    exclude: '^(tools/|\.git/|\.venv/|src/cygd_validator\.egg-info/|\.github/)'
+
   - id: cygd-ipc
     name: CyGD IPC
-    entry: python -m cygd_validator.cli --engine ipc --policy policies/ipc.json
     language: system
-    files: '\.(xml|txt)$'
+    entry: E:/Users/10055372/validator-cygd/.venv/Scripts/python.exe -m cygd_validator.cli
+    args: ["--engine","ipc","--policy","policies/ipc.json"]
+    files: '^(?!\.venv/).*\.(xml|txt)$'
+    exclude: '^(\.git/|\.venv/|src/cygd_validator\.egg-info/|\.github/)'

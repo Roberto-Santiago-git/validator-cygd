@@ -1,5 +1,0 @@
-Metadata-Version: 2.4
-Name: cygd-validator
-Version: 0.1.0
-Summary: Static validator for Oracle/PowerShell/IPC with strict output.
-Requires-Python: >=3.9
