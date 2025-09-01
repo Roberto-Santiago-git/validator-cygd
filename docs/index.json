@@ -1,0 +1,23 @@
+﻿{
+  "version": 1,
+  "policies": [
+    {
+      "id": "oracle",
+      "name": "Oracle SQL",
+      "url": "https://roberto-santiago-git.github.io/validator-cygd/policies/oracle.json",
+      "applies_to": { "extensions": ["sql","ddl","pkb","pks","pkg"] }
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "url": "https://roberto-santiago-git.github.io/validator-cygd/policies/powershell.json",
+      "applies_to": { "extensions": ["ps1"] }
+    },
+    {
+      "id": "ipc",
+      "name": "IPC",
+      "url": "https://roberto-santiago-git.github.io/validator-cygd/policies/ipc.json",
+      "applies_to": { "extensions": ["xml","txt"] }
+    }
+  ]
+}
