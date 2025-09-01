@@ -1,0 +1,18 @@
+﻿repos:
+- repo: local
+  hooks:
+  - id: cygd-oracle
+    name: CyGD Oracle
+    entry: python -m cygd_validator.cli --policy policies/oracle.json
+    language: system
+    files: '\.(sql|ddl|pkb|pks|pkg)$'
+  - id: cygd-ps1
+    name: CyGD PowerShell
+    entry: python -m cygd_validator.cli --engine powershell --policy policies/powershell.json
+    language: system
+    files: '\.ps1$'
+  - id: cygd-ipc
+    name: CyGD IPC
+    entry: python -m cygd_validator.cli --engine ipc --policy policies/ipc.json
+    language: system
+    files: '\.(xml|txt)$'

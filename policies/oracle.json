@@ -1,0 +1,5 @@
+{
+  "ORA-TABLE-OPTIONS": true,
+  "ORA-COL-PREFIX": true,
+  "ORA-PK-IDX-NAMING": true
+}

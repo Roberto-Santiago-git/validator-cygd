@@ -1,0 +1,2 @@
+[console_scripts]
+cygd-validate = cygd_validator.cli:main

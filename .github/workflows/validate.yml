@@ -1,0 +1,18 @@
+﻿name: validate
+on: [push, pull_request]
+jobs:
+  cygd:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Run CyGD validator
+      shell: pwsh
+      run: |
+        $env:PYTHONPATH = "$PWD\src"
+        $log = & tools/run_folder.ps1 -Root $PWD -PythonExe "python" 2>&1
+        $bad = $log | Where-Object { $_ -match '^Validator Veredicto:\s+NO CUMPLE' }
+        $log | Out-Host
+        if ($bad) { throw "Validación fallida" }

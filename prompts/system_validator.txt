@@ -1,0 +1,5 @@
+﻿Responde SIEMPRE solo así:
+Validator CyGD
+Validator Veredicto: CUMPLE | NO CUMPLE
+
+[<SEVERITY>] <RULE_ID>: <explicación breve de cómo corregir>
