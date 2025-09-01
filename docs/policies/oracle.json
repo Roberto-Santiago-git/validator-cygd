@@ -1,14 +1,15 @@
-﻿{
-  "rules": [
-    { "id": "ORA-TABLE-NOLOGGING", "severity": "error", "desc": "La tabla no especifica NOLOGGING." },
-    { "id": "ORA-TABLE-NOCOMPRESS", "severity": "error", "desc": "La tabla no especifica COMPRESS." },
-    { "id": "ORA-INDEX-NOLOGGING", "severity": "error", "desc": "El índice no especifica NOLOGGING." },
-    { "id": "ORA-INDEX-COMPOSITE-NOCOMPRESS", "severity": "error", "desc": "Índice compuesto sin COMPRESS." },
-    { "id": "ORA-VARCHAR2-BYTE", "severity": "warning", "desc": "Recomendado declarar VARCHAR2(... BYTE)." },
-    { "id": "OK-TABLE-NAME-PREFIX", "severity": "info", "desc": "Nombre de tabla con prefijo TBL_." },
-    { "id": "OK-COMMENT-TABLE", "severity": "info", "desc": "Comentario de tabla presente." },
-    { "id": "OK-PK-NAME-MATCH", "severity": "info", "desc": "La PK coincide con el índice PK_ correspondiente." },
-    { "id": "NOM-COLS", "severity": "info", "desc": "Columnas T###_* aceptadas si replican fuente; nuevas deben usar NU_/IM_/FH_." },
-    { "id": "INPUT-NO-CODE", "severity": "error", "desc": "El adjunto no expuso contenido." }
-  ]
-}
+﻿{ "rules": [
+  { "id": "ORA-TABLE-NOLOGGING", "severity": "error", "desc": "La tabla no especifica NOLOGGING." },
+  { "id": "ORA-TABLE-NOCOMPRESS", "severity": "error", "desc": "La tabla no especifica COMPRESS." },
+  { "id": "ORA-INDEX-NOLOGGING", "severity": "error", "desc": "El índice no especifica NOLOGGING." },
+  { "id": "ORA-INDEX-COMPOSITE-NOCOMPRESS", "severity": "error", "desc": "Índice compuesto sin COMPRESS." },
+  { "id": "ORA-VARCHAR2-BYTE", "severity": "warning", "desc": "Recomendado declarar VARCHAR2(... BYTE)." },
+  { "id": "OK-TABLE-NAME-PREFIX", "severity": "info", "desc": "Nombre de tabla con prefijo TBL_." },
+  { "id": "OK-COMMENT-TABLE", "severity": "info", "desc": "Comentario de tabla presente." },
+  { "id": "OK-PK-NAME-MATCH", "severity": "info", "desc": "La PK coincide con el índice PK_ correspondiente." },
+  { "id": "NOM-COLS", "severity": "info", "desc": "Columnas T###_* aceptadas si replican fuente; nuevas deben usar NU_/IM_/FH_." },
+  { "id": "ORA-INSERT-COLS-LIST", "severity": "error", "desc": "INSERT sin enumerar columnas." },
+  { "id": "ORA-FORALL-RANGE", "severity": "error", "desc": "FORALL con rango inválido; debe ser 1..coleccion.COUNT." },
+  { "id": "ORA-BITACORA-FLUJO", "severity": "warning", "desc": "Bitácora: usar SP_BITACORA_INICIO al inicio y SP_BITACORA_FIN al final con el mismo ID_EJECUCION." },
+  { "id": "INPUT-NO-CODE", "severity": "error", "desc": "El adjunto no expuso contenido." }
+] }
